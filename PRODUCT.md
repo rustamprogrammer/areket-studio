@@ -32,8 +32,8 @@ The portfolio spans a business ERP, a public website, and an operational taxi fl
 ## Evidence on Hand
 - TechnoKhan live URL: https://technokhan.kz/ .
 - BigPro live URL: https://bigpro.kz/ .
-- TaxiPark source: C:/Users/ADMIN/Desktop/Таксопарк, read-only reference for this site.
-- Course criteria: C:/Users/ADMIN/Downloads/Final Project Criteria.pdf .
+- TaxiPark source: user-supplied local project, read-only reference for this site.
+- Course criteria: the supplied `Final Project Criteria.pdf`.
 
 ## Product Principles
 - Show actual work before describing services.

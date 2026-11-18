@@ -3,7 +3,7 @@
 ## Two minute walkthrough
 
 1. **Purpose:** `areket.studio` presents a digital studio and three portfolio entries. Three pages share the same navigation and visual system.
-2. **Home:** point out the TaxiPark screenshot, the project links, responsive composition and one intentional hero entrance.
+2. **Home:** point out the TaxiPark screenshot, the project links and responsive composition. Move the pointer across the blue visual and closing section to show the light ribbons bending toward it.
 3. **Projects:** the cards come from `data/projects.json` through `fetch()`. Search and category filters are implemented with jQuery. The detail dialog is custom HTML/JavaScript, not a Bootstrap modal. Its external button only appears when a public URL exists.
 4. **Language and theme:** click RU/EN and dark/light, then reload. Both preferences persist in `localStorage`.
 5. **Brief:** show errors for empty or invalid fields, then save a valid entry. Explain that it is stored locally and is not emailed.
@@ -13,7 +13,7 @@
 
 - `index.html`, `projects.html`, `contact.html`: semantic page structure and navigation.
 - `assets/css/style.css`: responsive layout, custom visual language, feedback states and reduced motion.
-- `assets/js/app.js`: shared state, localization, theme, project interactions and form validation.
+- `assets/js/app.js`: shared state, localization, theme, project interactions, form validation and pointer-driven SVG paths.
 - `data/projects.json`: project records separate from the interface.
 
 ## Theory practice

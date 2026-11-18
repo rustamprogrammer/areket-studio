@@ -142,92 +142,63 @@
     const follower = document.createElement('div'); follower.className = 'project-follower'; follower.setAttribute('aria-hidden','true'); document.body.appendChild(follower);
     $('#project-results').on('mousemove','.project-row',function(event){ if (matchMedia('(pointer: fine)').matches) { const index = projects.findIndex(item => item.id === this.id); if (index >= 0) { follower.classList.add('is-visible'); follower.style.setProperty('--active',index); follower.style.left = Math.min(event.clientX + 32,innerWidth - 250) + 'px'; follower.style.top = Math.min(event.clientY - 55,innerHeight - 145) + 'px'; } } }).on('mouseleave','.project-row',() => follower.classList.remove('is-visible'));
   }
-  // Adapted from OriginKit Line Ripple Background, Variant 1: a field of short lines reacts to the pointer.
-  function initRippleFields() {
-    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const coarse = matchMedia('(pointer: coarse)').matches;
-    document.querySelectorAll('[data-ripple-field]').forEach(field => {
-      const canvas = document.createElement('canvas');
-      canvas.className = 'line-ripple-canvas';
-      canvas.setAttribute('aria-hidden','true');
-      field.prepend(canvas);
-      const context = canvas.getContext('2d');
-      if (!context) { canvas.remove(); return; }
-      let width = 0, height = 0, visible = true, frame = 0, lastFrame = 0;
-      let x = -500, y = -500, targetX = -500, targetY = -500;
-      let energy = 0, targetEnergy = 0;
-      const rgb = getComputedStyle(field).getPropertyValue('--ripple-rgb').trim() || '255,255,255';
-      const spacing = field.classList.contains('hero-visual') ? 34 : 42;
-      function paint(time = 0) {
-        context.clearRect(0,0,width,height);
-        const radius = 175;
-        for (let row = spacing / 2; row < height; row += spacing) {
-          for (let col = spacing / 2; col < width; col += spacing) {
-            const dx = col - x, dy = row - y;
-            const distance = Math.hypot(dx,dy);
-            const influence = energy * Math.max(0,1 - distance / radius) ** 2;
-            const wave = Math.sin(distance / 20 - time / 180) * influence;
-            const angle = Math.sin(col * .013 + row * .017) * .15 + influence * 1.3;
-            const cx = col + (distance ? dx / distance * wave * 22 : 0);
-            const cy = row + (distance ? dy / distance * wave * 22 : 0);
-            const length = 8 + influence * 9;
-            context.beginPath();
-            context.moveTo(cx - Math.cos(angle) * length / 2,cy - Math.sin(angle) * length / 2);
-            context.lineTo(cx + Math.cos(angle) * length / 2,cy + Math.sin(angle) * length / 2);
-            context.strokeStyle = `rgba(${rgb},${.24 + influence * .56})`;
-            context.lineWidth = 1.4 + influence * .8;
-            context.lineCap = 'round';
-            context.stroke();
-          }
-        }
+  // Inspired by OriginKit Ribbon Glow, Variant 1: broad light bands bend toward the pointer.
+  function initRibbonFields() {
+    const staticMotion = matchMedia('(prefers-reduced-motion: reduce), (pointer: coarse)').matches;
+    const tracks = [
+      [[-220,810],[120,630],[420,130],[900,-120],1],
+      [[-280,650],[180,540],[650,360],[1160,-100],-.65],
+      [[100,840],[360,660],[530,160],[1190,100],.5]
+    ];
+    document.querySelectorAll('[data-ribbon-field]').forEach((field,index) => {
+      const hero = field.classList.contains('hero-visual');
+      const id = `ribbon-${index}`;
+      const colors = hero ? ['#86cfff','#f6fbff'] : ['#ffb496','#ffe0c2'];
+      const svg = document.createElementNS('http://www.w3.org/2000/svg','svg');
+      svg.classList.add('ribbon-field');
+      svg.setAttribute('viewBox','0 0 1000 700');
+      svg.setAttribute('preserveAspectRatio','none');
+      svg.setAttribute('aria-hidden','true');
+      svg.setAttribute('focusable','false');
+      svg.innerHTML = `<defs><linearGradient id="${id}" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="${colors[0]}"/><stop offset=".55" stop-color="${colors[1]}"/><stop offset="1" stop-color="${colors[0]}"/></linearGradient><filter id="${id}-blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="25"/></filter></defs>${tracks.map(() => `<g><path fill="none" stroke="url(#${id})" stroke-width="125" stroke-linecap="round" opacity=".45" filter="url(#${id}-blur)"/><path fill="none" stroke="url(#${id})" stroke-width="30" stroke-linecap="round" opacity=".22"/><path fill="none" stroke="${colors[1]}" stroke-width="3" stroke-linecap="round" opacity=".23"/></g>`).join('')}`;
+      field.prepend(svg);
+      const groups = [...svg.querySelectorAll('g')];
+      let x = .5, y = .5, targetX = .5, targetY = .5, presence = 0, targetPresence = 0, frame = 0;
+      function draw() {
+        const bendX = (x - .5) * 280 * presence;
+        const bendY = (y - .5) * 220 * presence;
+        tracks.forEach(([start,controlA,controlB,end,weight],i) => {
+          const path = `M ${start[0]} ${start[1]} C ${controlA[0] + bendX * weight} ${controlA[1] + bendY * weight}, ${controlB[0] + bendX * (1 - weight / 2)} ${controlB[1] + bendY * (1 - weight / 2)}, ${end[0]} ${end[1]}`;
+          groups[i].querySelectorAll('path').forEach(line => line.setAttribute('d',path));
+        });
       }
-      function tick(time) {
+      function step() {
         frame = 0;
-        if (!visible || document.hidden) return;
-        if (time - lastFrame < 32) { schedule(); return; }
-        lastFrame = time;
-        x += (targetX - x) * .18;
-        y += (targetY - y) * .18;
-        energy += (targetEnergy - energy) * .1;
-        if (energy < .005 && targetEnergy === 0) energy = 0;
-        paint(time);
-        if (targetEnergy || energy) schedule();
+        if (document.hidden) return;
+        x += (targetX - x) * .14;
+        y += (targetY - y) * .14;
+        presence += (targetPresence - presence) * .12;
+        draw();
+        if (Math.abs(x - targetX) + Math.abs(y - targetY) + Math.abs(presence - targetPresence) > .003) schedule();
       }
       function schedule() {
-        if (!frame && visible && !document.hidden && !reduced && !coarse) frame = requestAnimationFrame(tick);
+        if (!frame && !document.hidden) frame = requestAnimationFrame(step);
       }
-      function resize() {
+      draw();
+      if (staticMotion) return;
+      field.addEventListener('pointermove',event => {
         const box = field.getBoundingClientRect();
-        width = box.width; height = box.height;
-        if (!width || !height) return;
-        const dpr = Math.min(devicePixelRatio || 1,2);
-        canvas.width = Math.round(width * dpr);
-        canvas.height = Math.round(height * dpr);
-        context.setTransform(dpr,0,0,dpr,0,0);
-        paint(performance.now());
-      }
-      if ('ResizeObserver' in window) new ResizeObserver(resize).observe(field);
-      else window.addEventListener('resize',resize);
-      if ('IntersectionObserver' in window) new IntersectionObserver(entries => {
-        visible = entries[0].isIntersecting;
-        if (visible) { resize(); schedule(); }
-      }).observe(field);
-      if (!reduced && !coarse) {
-        field.addEventListener('pointermove',event => {
-          const box = field.getBoundingClientRect();
-          targetX = event.clientX - box.left;
-          targetY = event.clientY - box.top;
-          targetEnergy = 1;
-          schedule();
-        });
-        field.addEventListener('pointerleave',() => { targetEnergy = 0; schedule(); });
-        document.addEventListener('visibilitychange',() => { if (!document.hidden) schedule(); });
-      }
-      resize();
+        targetX = Math.max(0,Math.min(1,(event.clientX - box.left) / box.width));
+        targetY = Math.max(0,Math.min(1,(event.clientY - box.top) / box.height));
+        targetPresence = 1;
+        schedule();
+      });
+      field.addEventListener('pointerleave',() => { targetX = .5; targetY = .5; targetPresence = 0; schedule(); });
+      document.addEventListener('visibilitychange',() => { if (!document.hidden) schedule(); });
     });
   }
   document.addEventListener('DOMContentLoaded',() => {
-    initRippleFields();
+    initRibbonFields();
     initDirectionHover();
     applyTheme(); applyLanguage();
     document.querySelector('.lang-toggle')?.addEventListener('click',() => { lang = lang === 'ru' ? 'en' : 'ru'; safeSet('areket-language',lang); applyLanguage(); applyTheme(); });

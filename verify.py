@@ -58,8 +58,11 @@ for key in keys:
     assert f"{key}:" in js, f"missing translation: {key}"
 ET.parse(ROOT / "assets/images/taxipark-preview.svg")
 assert "direction-word" in css and "follower-reel" in css
-assert "line-ripple-canvas" in css and "initRippleFields" in js
-assert 'data-ripple-field' in PAGES[0].read_text(encoding="utf-8")
-assert 'data-ripple-field' in PAGES[1].read_text(encoding="utf-8")
+assert "ribbon-field" in css and "initRibbonFields" in js
+assert "data-ripple-field" not in js + "".join(p.read_text(encoding="utf-8") for p in PAGES)
+assert 'data-ribbon-field' in PAGES[0].read_text(encoding="utf-8")
+assert 'data-ribbon-field' in PAGES[1].read_text(encoding="utf-8")
+for field in ("name", "email", "message"):
+    assert f'aria-describedby="{field}-error"' in PAGES[2].read_text(encoding="utf-8")
 
 print("Static checks passed: pages, links, assets, JSON, CSS and translation keys.")

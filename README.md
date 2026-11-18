@@ -39,7 +39,7 @@ Open `http://localhost:8000/`. Serve the site through HTTP: the project catalogu
 | JavaScript and jQuery | Menu, localization, theme, project loading, search/filter, modal, validated brief and toast |
 | JSON bonus | `data/projects.json` loaded through `fetch()` |
 | Localization bonus | Site-wide RU/EN dictionary with a saved language choice |
-| Other bonuses | Custom dialog, dark/light mode, search/filter, animated content update and toast |
+| Other bonuses | Custom dialog, dark/light mode, search/filter, animated content update, toast and pointer-driven background |
 
 The brief form is a course demonstration. It writes to `localStorage` only. No message is sent, and no production contact endpoint has been supplied. To use it for real inquiries, connect a backend and replace the explanatory note.
 
@@ -47,9 +47,9 @@ The brief form is a course demonstration. It writes to `localStorage` only. No m
 
 - TechnoKhan: [technokhan.kz](https://technokhan.kz/). Its public title identifies ERP, POS and inventory functions.
 - BigPro: [bigpro.kz](https://bigpro.kz/). Its content was unavailable during implementation, so the portfolio copy avoids unsupported functional claims.
-- TaxiPark: screenshot and functional description from the user-named local TaxiPark project (`C:/Users/ADMIN/Desktop/Таксопарк`). The screenshot is embedded in `taxipark-preview.svg` for a portable single-file visual.
+- TaxiPark: screenshot and functional description from the user-supplied local TaxiPark project. The screenshot is embedded in `taxipark-preview.svg` for a portable single-file visual.
 - The project preview adapts the `Variant 1` preset of [OriginKit’s Hover Image Reveal](https://www.originkit.dev/components/hover-image-reveal), and the service links adapt `Variant 1` of [Direction Hover](https://www.originkit.dev/components/directionhover). Their authenticated React source was reviewed, then the cursor-following reel and directional text swap were reimplemented in the assignment's plain JavaScript/jQuery stack.
-- The blue project visual and orange closing panels adapt the appearance and cursor response of [OriginKit’s Line Ripple Background, Variant 1](https://www.originkit.dev/components/line-ripple-background). The component source could not be copied because the account had reached its daily copy limit; the canvas implementation is original and follows the visible preset controls. It pauses offscreen and shows a still pattern on touch devices or when reduced motion is requested.
+- The blue project visual and orange closing panels use original SVG light ribbons inspired by [OriginKit’s Ribbon Glow, Variant 1](https://www.originkit.dev/components/ribbon-glow). The bands bend toward the pointer, then settle; on touch devices and with reduced motion they stay still. The implementation uses the visible preset as design reference and does not copy its WebGL source.
 - Bootstrap 5.3.8, jQuery 3.7.1, Manrope and Barlow Condensed load from their public CDNs. Replace the CDN links with local licensed copies if offline delivery is required.
 
 See `DEFENSE.md` for the oral defense outline.

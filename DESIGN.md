@@ -7,6 +7,7 @@ colors:
   soft: "#d9e3e6"
   line: "#bbcbd0"
   orange: "#bb3b23"
+  orange-dark: "#ff8a6b"
   orange-surface: "#ee5b3e"
   blue: "#396cdf"
   muted: "#435863"
@@ -42,7 +43,7 @@ The page speaks through large condensed type, direct statements and actual produ
 
 ## Colors
 
-Ink carries structure and the dark work section. Orange marks action and decisive phrases; the brighter orange surface is reserved for the closing call to action. Blue frames the real TaxiPark interface.
+Ink carries structure and the dark work section. Orange marks action and decisive phrases; its lighter dark-mode variant keeps text readable. The brighter orange surface is reserved for the closing call to action. Blue frames the real TaxiPark interface.
 
 ## Typography
 
@@ -62,10 +63,10 @@ Buttons, filters, project rows and form fields have square corners. Only the pro
 
 ## Components
 
-Links move a few pixels or draw an underline. Project rows expose an image reel on pointer hover, adapted from OriginKit's Hover Image Reveal preset. Service links switch their text from the cursor's entry edge, adapted from Direction Hover. The project's detail dialog uses the native dialog element. The hero enters once. The blue visual and orange closing panels use a short-line field inspired by OriginKit's Line Ripple Background, Variant 1; lines ripple near the pointer and stay still on touch devices or under reduced motion.
+Links move a few pixels or draw an underline. Project rows expose an image reel on pointer hover, adapted from OriginKit's Hover Image Reveal preset. Service links switch their text from the cursor's entry edge, adapted from Direction Hover. The project's detail dialog uses the native dialog element. The hero enters once. Broad light ribbons in the blue visual and orange closing panels bend toward the pointer, inspired by OriginKit's Ribbon Glow, Variant 1; they stay still on touch devices or under reduced motion.
 
 ## Do's and Don'ts
 
 - Use actual project evidence and plainly label unavailable detail.
 - Keep form behavior honest: the course demo saves locally only.
-- Keep motion bounded to the hero, hover feedback and cursor-reactive line fields.
+- Keep motion bounded to the hero, hover feedback and cursor-reactive ribbons.
