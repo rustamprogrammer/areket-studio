@@ -152,7 +152,10 @@
   }
   function initProjects() {
     if (!$ || !document.getElementById('project-results')) return;
-    fetch('data/projects.json').then(response => { if (!response.ok) throw Error('projects'); return response.json(); }).then(data => {
+    const loadProjects = location.protocol === 'file:'
+      ? Promise.resolve(window.areketProjects)
+      : fetch('data/projects.json').then(response => { if (!response.ok) throw Error('projects'); return response.json(); }).catch(() => window.areketProjects);
+    loadProjects.then(data => {
       if (!Array.isArray(data)) throw Error('projects');
       projects = data;
       follower.innerHTML = `<div class="follower-reel">${projects.map(p => `<div class="follower-slide ${p.visual}">${p.visual === 'taxipark' ? '<img src="assets/images/taxipark-preview.svg" alt="">' : `<strong>${escapeHTML(p.name)}</strong>`}</div>`).join('')}</div>`;

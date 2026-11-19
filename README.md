@@ -10,7 +10,7 @@ From this directory:
 python -m http.server 8000
 ```
 
-Open `http://localhost:8000/`. Serve the site through HTTP: the project catalogue is loaded with `fetch()` from `data/projects.json`. Bootstrap, jQuery and web fonts currently load from public CDNs, so those assets require internet access.
+Open `http://localhost:8000/`. On HTTP, the project catalogue loads through `fetch()` from `data/projects.json`. Opening `projects.html` directly as a file uses the matching `data/projects.js` fallback because browsers block JSON fetches from `file://`. Bootstrap, jQuery and web fonts currently load from public CDNs, so those assets require internet access.
 
 ## Pages
 
@@ -37,7 +37,7 @@ Open `http://localhost:8000/`. Serve the site through HTTP: the project catalogu
 | Responsive and accessible | Breakpoints, semantic structure, skip link, labels, alt text, dialog and reduced motion |
 | Bootstrap and custom styling | Bootstrap `container-fluid` layout, responsive baseline and custom site system |
 | JavaScript and jQuery | Menu, localization, theme, project loading, search/filter, modal and validated WhatsApp brief |
-| JSON bonus | `data/projects.json` loaded through `fetch()` |
+| JSON bonus | `data/projects.json` loaded through `fetch()` on HTTP; matched local fallback for `file://` |
 | Localization bonus | Site-wide RU/EN dictionary with a saved language choice |
 | Other bonuses | Custom dialog, dark/light mode, search/filter, animated content update and pointer-driven background |
 

@@ -43,6 +43,9 @@ for page in PAGES:
         assert (ROOT / relative).is_file(), f"{page.name}: missing {relative}"
 
 projects = json.loads((ROOT / "data/projects.json").read_text(encoding="utf-8"))
+fallback = (ROOT / "data/projects.js").read_text(encoding="utf-8").strip()
+assert fallback.startswith("window.areketProjects = ") and fallback.endswith(";"), "invalid local project fallback"
+assert json.loads(fallback[len("window.areketProjects = "):-1]) == projects, "project JSON and file fallback differ"
 assert len(projects) == 3
 assert {p["id"] for p in projects} == {"taxipark", "technokhan", "bigpro"}
 for project in projects:
