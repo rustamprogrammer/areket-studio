@@ -62,7 +62,12 @@ assert "ribbon-field" in css and "initRibbonFields" in js
 assert "data-ripple-field" not in js + "".join(p.read_text(encoding="utf-8") for p in PAGES)
 assert 'data-ribbon-field' in PAGES[0].read_text(encoding="utf-8")
 assert 'data-ribbon-field' in PAGES[1].read_text(encoding="utf-8")
-for field in ("name", "email", "message"):
+for field in ("name", "goal", "audience", "features"):
     assert f'aria-describedby="{field}-error"' in PAGES[2].read_text(encoding="utf-8")
+assert "https://wa.me/77478032383?text=" in js
+assert "brief-email" not in PAGES[2].read_text(encoding="utf-8")
+assert "areket-brief-history" in js
+assert "history.slice(0,5)" in js
+assert 'id="brief-history-list"' in PAGES[2].read_text(encoding="utf-8")
 
 print("Static checks passed: pages, links, assets, JSON, CSS and translation keys.")

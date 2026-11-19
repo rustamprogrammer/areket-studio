@@ -13,36 +13,56 @@
   <a class="skip-link" href="#main" data-i18n="skip">Перейти к содержимому</a>
   <header class="site-header" id="top"><nav class="container-fluid nav-shell" aria-label="Главная навигация"><a class="brand" href="index.html" aria-label="areket.studio — главная"><span class="brand-symbol" aria-hidden="true"><span></span><span></span></span>areket<span class="brand-dot">.</span>studio</a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Открыть меню"><span></span><span></span></button><div class="nav-links" id="nav-links"><a href="index.html" data-i18n="navHome">Главная</a><a href="projects.html" data-i18n="navProjects">Проекты</a><a href="contact.html" aria-current="page" data-i18n="navContact">Обсудить проект</a></div><div class="nav-tools"><button class="text-control lang-toggle" type="button" aria-label="Switch language">EN</button><button class="text-control theme-toggle" type="button" aria-label="Переключить тему"><span class="theme-icon" aria-hidden="true">◐</span></button></div></nav></header>
   <main id="main" class="contact-layout container-fluid">
-    <div class="contact-copy" data-enter><h1 data-i18n="contactTitle">Начнём<br><span>с задачи.</span></h1><p data-i18n="contactIntro">Расскажите, что хотите создать. Интерактивный бриф поможет собрать вводные в одном месте.</p></div>
+    <div class="contact-copy" data-enter>
+      <h1 data-i18n="contactTitle">Начнём<br><span>с задачи.</span></h1>
+      <section class="brief-history" aria-labelledby="history-title">
+        <h2 id="history-title" data-i18n="historyTitle">История запросов</h2>
+        <p class="history-note" data-i18n="historyNote">Заявки сохраняются только в этом браузере. Показаны пять последних.</p>
+        <div id="brief-history-list" class="brief-history-list" aria-live="polite"></div>
+      </section>
+    </div>
     <div>
       <form class="contact-form" id="brief-form" novalidate>
-        <h2 data-i18n="briefTitle">Короткий бриф</h2>
+        <h2 data-i18n="briefTitle">Расскажите о проекте</h2>
+        <p class="brief-intro" data-i18n="briefIntro">Достаточно того, что известно сейчас. Детали уточним в переписке.</p>
         <div class="form-field">
-          <label for="brief-name" data-i18n="nameLabel">Как к вам обращаться</label>
-          <input id="brief-name" name="name" autocomplete="name" maxlength="80" aria-describedby="name-error" required>
+          <label for="brief-name" data-i18n="nameLabel">Имя и фамилия</label>
+          <input id="brief-name" name="name" autocomplete="name" maxlength="80" data-placeholder="namePlaceholder" placeholder="Например: Айжан Садыкова" aria-describedby="name-error" required>
           <small class="field-error" id="name-error" aria-live="polite"></small>
         </div>
         <div class="form-field">
-          <label for="brief-email" data-i18n="emailLabel">Электронная почта</label>
-          <input id="brief-email" name="email" type="email" autocomplete="email" maxlength="150" aria-describedby="email-error" required>
-          <small class="field-error" id="email-error" aria-live="polite"></small>
+          <label for="brief-company" data-i18n="companyLabel">Компания или проект <span class="optional">(необязательно)</span></label>
+          <input id="brief-company" name="company" autocomplete="organization" maxlength="100" data-placeholder="companyPlaceholder" placeholder="Название или сфера бизнеса">
         </div>
         <fieldset>
-          <legend class="form-legend" data-i18n="typeLabel">Что вам нужно</legend>
-          <div class="choice-group"><label><input type="radio" name="type" value="website" checked><span data-i18n="typeWebsite">Сайт</span></label><label><input type="radio" name="type" value="system"><span data-i18n="typeSystem">Внутренняя система</span></label><label><input type="radio" name="type" value="interface"><span data-i18n="typeInterface">Интерфейс</span></label></div>
+          <legend class="form-legend" data-i18n="typeLabel">Что хотите создать</legend>
+          <div class="choice-group"><label><input type="radio" name="type" value="website" checked><span data-i18n="typeWebsite">Сайт</span></label><label><input type="radio" name="type" value="system"><span data-i18n="typeSystem">Внутреннюю систему</span></label><label><input type="radio" name="type" value="interface"><span data-i18n="typeInterface">Интерфейс</span></label></div>
         </fieldset>
         <div class="form-field">
-          <label for="brief-message" data-i18n="messageLabel">Расскажите о задаче</label>
-          <textarea id="brief-message" name="message" minlength="20" maxlength="1200" aria-describedby="message-error" required></textarea>
-          <small class="field-error" id="message-error" aria-live="polite"></small>
+          <label for="brief-goal" data-i18n="goalLabel">Какую задачу должен решить проект?</label>
+          <textarea id="brief-goal" name="goal" minlength="20" maxlength="800" rows="4" data-placeholder="goalPlaceholder" placeholder="Например: клиентам сложно записываться, хотим принимать заявки через сайт" aria-describedby="goal-error" required></textarea>
+          <small class="field-error" id="goal-error" aria-live="polite"></small>
         </div>
-        <p class="form-note" data-i18n="formNote">Это учебная демонстрация: бриф сохраняется только в вашем браузере и никуда не отправляется.</p>
-        <button class="button button-dark" type="submit"><span data-i18n="saveBrief">Сохранить бриф</span><span class="arrow" aria-hidden="true">↗</span></button>
-        <div class="saved-brief" id="saved-brief" hidden></div>
+        <div class="form-field">
+          <label for="brief-audience" data-i18n="audienceLabel">Кто будет пользоваться?</label>
+          <input id="brief-audience" name="audience" maxlength="200" data-placeholder="audiencePlaceholder" placeholder="Клиенты, сотрудники, партнёры…" aria-describedby="audience-error" required>
+          <small class="field-error" id="audience-error" aria-live="polite"></small>
+        </div>
+        <div class="form-field">
+          <label for="brief-features" data-i18n="featuresLabel">Что обязательно должно работать?</label>
+          <textarea id="brief-features" name="features" minlength="10" maxlength="800" rows="3" data-placeholder="featuresPlaceholder" placeholder="Например: каталог, личный кабинет, онлайн-оплата, отчёты" aria-describedby="features-error" required></textarea>
+          <small class="field-error" id="features-error" aria-live="polite"></small>
+        </div>
+        <div class="form-pair">
+          <div class="form-field"><label for="brief-timeline" data-i18n="timelineLabel">Когда нужен запуск?</label><select id="brief-timeline" name="timeline"><option value="" data-i18n="selectOption">Пока не знаю</option><option value="month" data-i18n="timelineMonth">В течение месяца</option><option value="quarter" data-i18n="timelineQuarter">В течение 3 месяцев</option><option value="flexible" data-i18n="timelineFlexible">Срок гибкий</option></select></div>
+          <div class="form-field"><label for="brief-budget" data-i18n="budgetLabel">Бюджет <span class="optional">(необязательно)</span></label><select id="brief-budget" name="budget"><option value="" data-i18n="selectOption">Пока не знаю</option><option value="under500" data-i18n="budgetUnder500">До 500 000 ₸</option><option value="500to1500" data-i18n="budget500to1500">500 000–1 500 000 ₸</option><option value="above1500" data-i18n="budgetAbove1500">Более 1 500 000 ₸</option></select></div>
+        </div>
+        <p class="form-note" data-i18n="formNote">Откроется WhatsApp с готовым сообщением для areket.studio. Проверьте текст и нажмите «Отправить» в WhatsApp.</p>
+        <p class="form-save-error" id="form-save-error" role="alert" hidden></p>
+        <button class="button button-dark" type="submit"><span data-i18n="sendBrief">Продолжить в WhatsApp</span><span class="arrow" aria-hidden="true">↗</span></button>
       </form>
     </div>
   </main>
   <footer class="site-footer container-fluid"><div><a class="brand" href="index.html">areket<span class="brand-dot">.</span>studio</a><p data-i18n="footerLine">Цифровые решения для бизнеса.</p></div><div class="footer-links"><a href="projects.html" data-i18n="navProjects">Проекты</a><a href="contact.html" data-i18n="navContact">Обсудить проект</a><a href="#top" data-i18n="backTop">Наверх ↑</a></div><div class="footer-meta"><span>© 2026 areket.studio</span><span>OriginKit: <a href="https://www.originkit.dev/components/hover-image-reveal" target="_blank" rel="noopener noreferrer">Hover Image Reveal</a> + <a href="https://www.originkit.dev/components/directionhover" target="_blank" rel="noopener noreferrer">Direction Hover</a> + <a href="https://www.originkit.dev/components/ribbon-glow" target="_blank" rel="noopener noreferrer">Ribbon Glow</a> · <span data-i18n="originNote">адаптация пресетов</span></span></div></footer>
-  <div class="toast-notice" role="status" aria-live="polite"></div>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script><script src="assets/js/app.js" defer></script>
 </body></html>

@@ -6,7 +6,7 @@
 2. **Home:** point out the TaxiPark screenshot, the project links and responsive composition. Move the pointer across the blue visual and closing section to show the light ribbons bending toward it.
 3. **Projects:** the cards come from `data/projects.json` through `fetch()`. Search and category filters are implemented with jQuery. The detail dialog is custom HTML/JavaScript, not a Bootstrap modal. Its external button only appears when a public URL exists.
 4. **Language and theme:** click RU/EN and dark/light, then reload. Both preferences persist in `localStorage`.
-5. **Brief:** show errors for empty or invalid fields, then save a valid entry. Explain that it is stored locally and is not emailed.
+5. **Brief:** show errors for empty or invalid fields, then fill in a project request and open the prepared WhatsApp message. Return to show the saved history; only the five latest requests appear in the left column. Explain that the visitor confirms sending in WhatsApp.
 6. **Mobile:** demonstrate the collapsible navigation and usable controls at a narrow viewport.
 
 ## Code ownership and logic

@@ -18,14 +18,14 @@ Open `http://localhost:8000/`. Serve the site through HTTP: the project catalogu
 | --- | --- |
 | `index.html` | Studio introduction, services, selected work and process |
 | `projects.html` | JSON project catalogue with live search, filters and a custom detail dialog |
-| `contact.html` | Validated interactive brief saved only in this browser |
+| `contact.html` | Validated project brief, local request history and a prepared WhatsApp message |
 
 ## Demonstration
 
 1. On the home page, inspect the TaxiPark interface and use the project links.
 2. Open Projects. Filter to “Systems”, search for “TechnoKhan”, open the custom project dialog, then follow the external project link.
 3. Switch the language to English and the theme to dark; reload to show persistence.
-4. Open the brief. Submit an empty form, correct its fields, save it and reload to show the local saved summary.
+4. Open the brief. Submit an empty form, correct its fields, then continue to WhatsApp and check the prepared message before sending. Return to see the saved request in the history on the left.
 5. Resize to mobile, open the navigation, and check keyboard focus and reduced motion.
 
 ## Criteria map
@@ -36,12 +36,12 @@ Open `http://localhost:8000/`. Serve the site through HTTP: the project catalogu
 | Design and usability | Shared type, color, spacing, custom project layouts and original CSS |
 | Responsive and accessible | Breakpoints, semantic structure, skip link, labels, alt text, dialog and reduced motion |
 | Bootstrap and custom styling | Bootstrap `container-fluid` layout, responsive baseline and custom site system |
-| JavaScript and jQuery | Menu, localization, theme, project loading, search/filter, modal, validated brief and toast |
+| JavaScript and jQuery | Menu, localization, theme, project loading, search/filter, modal and validated WhatsApp brief |
 | JSON bonus | `data/projects.json` loaded through `fetch()` |
 | Localization bonus | Site-wide RU/EN dictionary with a saved language choice |
-| Other bonuses | Custom dialog, dark/light mode, search/filter, animated content update, toast and pointer-driven background |
+| Other bonuses | Custom dialog, dark/light mode, search/filter, animated content update and pointer-driven background |
 
-The brief form is a course demonstration. It writes to `localStorage` only. No message is sent, and no production contact endpoint has been supplied. To use it for real inquiries, connect a backend and replace the explanatory note.
+The brief is saved in this browser's `localStorage` before opening a prepared WhatsApp chat at the user-provided number `+7 747 803 23 83`. The history displays the latest five requests while retaining older records locally. Each entry can be expanded and reopened in WhatsApp. The visitor reviews and sends the message in WhatsApp; the site cannot verify delivery. Browser storage is specific to this browser and origin, can be cleared by the visitor and is visible to anyone using the same browser profile.
 
 ## Source and asset notes
 

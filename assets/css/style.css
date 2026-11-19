@@ -901,6 +901,86 @@ p {
   color:var(--muted);
   font-size:17px
 }
+.brief-history {
+  margin-top:52px;
+  max-width:520px
+}
+.brief-history h2 {
+  font-size:clamp(32px,3vw,46px);
+  line-height:1;
+  margin:0 0 12px
+}
+.contact-copy .history-note {
+  margin:0 0 22px;
+  font-size:13px;
+  line-height:1.5
+}
+.brief-history-list {
+  display:grid;
+  gap:10px
+}
+.history-entry {
+  border-top:1px solid var(--line);
+  padding:13px 0
+}
+.history-entry summary {
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:16px;
+  cursor:pointer;
+  list-style:none
+}
+.history-entry summary::-webkit-details-marker {
+  display:none
+}
+.history-entry summary:focus-visible {
+  outline:3px solid var(--orange);
+  outline-offset:4px
+}
+.history-entry strong {
+  font-size:15px;
+  overflow-wrap:anywhere
+}
+.history-entry time {
+  color:var(--muted);
+  font-size:12px;
+  white-space:nowrap
+}
+.history-entry-type {
+  color:var(--orange);
+  display:block;
+  font-size:12px;
+  font-weight:800;
+  margin-top:3px
+}
+.history-entry-body {
+  padding-top:14px;
+  font-size:13px;
+  overflow-wrap:anywhere
+}
+.history-entry-body p {
+  margin:0 0 9px;
+  font-size:13px;
+  line-height:1.5
+}
+.contact-copy .history-empty,.contact-copy .history-overflow {
+  margin:0;
+  font-size:13px;
+  line-height:1.5
+}
+.history-overflow {
+  border-top:1px solid var(--line);
+  padding-top:12px
+}
+.form-save-error {
+  color:#bd3e2d;
+  font-size:13px;
+  margin:0 0 18px
+}
+.form-save-error[hidden] {
+  display:none
+}
 .contact-form {
   padding:38px;
   background:var(--panel);
@@ -908,6 +988,11 @@ p {
 }
 .contact-form h2 {
   font-size:56px;
+  margin-bottom:8px
+}
+.brief-intro {
+  color:var(--muted);
+  max-width:50ch;
   margin-bottom:30px
 }
 .form-field {
@@ -935,8 +1020,19 @@ p {
   box-shadow:0 0 0 3px rgba(57,108,223,.13)
 }
 .form-field textarea {
-  min-height:130px;
+  min-height:105px;
   resize:vertical
+}
+.form-pair {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px
+}
+.optional {
+  color:var(--muted);
+  font-weight:500;
+  text-transform:none;
+  letter-spacing:0
 }
 .field-error {
   min-height:18px;
@@ -978,15 +1074,6 @@ p {
   font-size:12px;
   color:var(--muted);
   margin:15px 0 25px
-}
-.saved-brief {
-  padding:14px 17px;
-  background:var(--soft);
-  font-size:12px;
-  margin-top:20px
-}
-.saved-brief[hidden] {
-  display:none
 }
 .no-js {
   padding:20px;
@@ -1480,6 +1567,10 @@ p {
   }
   .contact-form h2 {
     font-size:48px
+  }
+  .form-pair {
+    grid-template-columns:1fr;
+    gap:0
   }
 }
 @media(prefers-reduced-motion:reduce) {

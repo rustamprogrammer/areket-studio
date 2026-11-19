@@ -7,33 +7,24 @@
       heroTitle:'Разрабатываем<br><em>цифровые решения</em><br>для бизнеса<span class="hero-period">.</span>',heroText:'От сайта до внутренней системы: проектируем понятные интерфейсы и собираем работающий продукт.',viewWork:'Смотреть проекты',workInMotion:'Работа в движении',heroLineA:'Сайты',heroLineB:'Платформы',heroLineC:'Интерфейсы',
       aboutSide:'Что мы делаем',aboutTitle:'Сложное внутри.<br><span>Простое в работе.</span>',aboutText:'Хорошее цифровое решение помогает команде действовать быстрее. Мы соединяем структуру, дизайн и разработку в один понятный процесс.',serviceWeb:'Сайты и веб-приложения',serviceSystems:'Внутренние системы',serviceUX:'Интерфейсы и UX',workTitle:'Работы, за которыми<br>стоят задачи.',allWork:'Все проекты',taxiSummary:'Веб-система для автомобилей, водителей, аренд, финансов, задач и документов.',productSystem:'Продуктовая система',webProject:'Веб-проект',processSide:'Как работаем',processTitle:'От задачи до<br>готового продукта',step1:'Разбираемся',step1Text:'Собираем цели, ограничения и реальные сценарии пользователей.',step2:'Проектируем',step2Text:'Проверяем структуру, логику и ключевые экраны до разработки.',step3:'Запускаем',step3Text:'Собираем, тестируем и передаём готовое решение.',ctaTitle:'Есть задача?<br>Давайте действовать.',ctaButton:'Заполнить бриф',
       projectsTitle:'Наши<br><span>проекты.</span>',projectsIntro:'Сайты и системы с разными задачами. Откройте проект, чтобы увидеть, что находится за названием.',filterAll:'Все',filterSystems:'Системы',filterSites:'Сайты',searchPlaceholder:'Найти проект',loadingProjects:'Загружаем проекты…',emptyProjects:'Ничего не найдено. Попробуйте другое название или категорию.',loadError:'Не удалось загрузить проекты. Обновите страницу.',openProject:'Открыть проект',
-      contactTitle:'Начнём<br><span>с задачи.</span>',contactIntro:'Расскажите, что хотите создать. Интерактивный бриф поможет собрать вводные в одном месте.',briefTitle:'Короткий бриф',nameLabel:'Как к вам обращаться',emailLabel:'Электронная почта',typeLabel:'Что вам нужно',typeWebsite:'Сайт',typeSystem:'Внутренняя система',typeInterface:'Интерфейс',messageLabel:'Расскажите о задаче',formNote:'Это учебная демонстрация: бриф сохраняется только в вашем браузере и никуда не отправляется.',saveBrief:'Сохранить бриф',nameError:'Укажите имя (не менее 2 символов).',emailError:'Укажите корректный адрес электронной почты.',messageError:'Опишите задачу хотя бы в 20 символах.',saved:'Бриф сохранён в этом браузере.',savedLabel:'Последний сохранённый бриф',storageError:'Не удалось сохранить бриф в браузере.'
+      contactTitle:'Начнём<br><span>с задачи.</span>',contactIntro:'Опишите проект своими словами. Несколько ответов помогут нам понять задачу и подготовиться к разговору.',briefTitle:'Расскажите о проекте',briefIntro:'Достаточно того, что известно сейчас. Детали уточним в переписке.',nameLabel:'Как к вам обращаться',companyLabel:'Компания или проект <span class="optional">(необязательно)</span>',companyPlaceholder:'Название или сфера бизнеса',typeLabel:'Что хотите создать',typeWebsite:'Сайт',typeSystem:'Внутреннюю систему',typeInterface:'Интерфейс',goalLabel:'Какую задачу должен решить проект?',goalPlaceholder:'Например: клиентам сложно записываться, хотим принимать заявки через сайт',audienceLabel:'Кто будет пользоваться?',audiencePlaceholder:'Клиенты, сотрудники, партнёры…',featuresLabel:'Что обязательно должно работать?',featuresPlaceholder:'Например: каталог, личный кабинет, онлайн-оплата, отчёты',timelineLabel:'Когда нужен запуск?',budgetLabel:'Бюджет <span class="optional">(необязательно)</span>',selectOption:'Пока не знаю',timelineMonth:'В течение месяца',timelineQuarter:'В течение 3 месяцев',timelineFlexible:'Срок гибкий',budgetUnder500:'До 500 000 ₸',budget500to1500:'500 000–1 500 000 ₸',budgetAbove1500:'Более 1 500 000 ₸',formNote:'Откроется WhatsApp с готовым сообщением для areket.studio. Проверьте текст и нажмите «Отправить» в WhatsApp.',sendBrief:'Продолжить в WhatsApp',nameError:'Укажите имя (не менее 2 символов).',goalError:'Опишите задачу хотя бы в 20 символах.',audienceError:'Укажите, кто будет пользоваться продуктом.',featuresError:'Перечислите нужные функции (не менее 10 символов).'
     },
     en: {
       skip:'Skip to content',navHome:'Home',navProjects:'Projects',navContact:'Discuss a project',backTop:'Back to top ↑',footerLine:'Digital solutions for business.',originNote:'preset adaptation',
       heroTitle:'We build<br><em>digital solutions</em><br>for business<span class="hero-period">.</span>',heroText:'From a website to an internal system: we design clear interfaces and build working products.',viewWork:'Explore projects',workInMotion:'Work in motion',heroLineA:'Websites',heroLineB:'Platforms',heroLineC:'Interfaces',
       aboutSide:'What we do',aboutTitle:'Complex inside.<br><span>Simple to use.</span>',aboutText:'A useful digital product helps a team move faster. We bring structure, design and development into one clear process.',serviceWeb:'Websites and web apps',serviceSystems:'Internal systems',serviceUX:'Interfaces and UX',workTitle:'Work shaped<br>by real tasks.',allWork:'All projects',taxiSummary:'A web system for vehicles, drivers, rentals, finances, tasks and documents.',productSystem:'Product system',webProject:'Web project',processSide:'Our process',processTitle:'From brief to<br>working product',step1:'Discover',step1Text:'We collect goals, constraints and real user scenarios.',step2:'Design',step2Text:'We test structure, logic and key screens before development.',step3:'Launch',step3Text:'We build, test and hand over the finished product.',ctaTitle:'Have a project?<br>Let’s act.',ctaButton:'Fill out a brief',
       projectsTitle:'Selected<br><span>projects.</span>',projectsIntro:'Websites and systems built around different tasks. Open a project to see what stands behind its name.',filterAll:'All',filterSystems:'Systems',filterSites:'Websites',searchPlaceholder:'Find a project',loadingProjects:'Loading projects…',emptyProjects:'No projects found. Try another name or category.',loadError:'Projects could not be loaded. Refresh the page.',openProject:'Visit project',
-      contactTitle:'Start with<br><span>the task.</span>',contactIntro:'Tell us what you want to create. This interactive brief helps collect the essentials in one place.',briefTitle:'Short brief',nameLabel:'Your name',emailLabel:'Email address',typeLabel:'What do you need?',typeWebsite:'Website',typeSystem:'Internal system',typeInterface:'Interface',messageLabel:'Tell us about the task',formNote:'This is a course demo: the brief is saved only in your browser and is not sent anywhere.',saveBrief:'Save brief',nameError:'Enter a name of at least 2 characters.',emailError:'Enter a valid email address.',messageError:'Describe the task in at least 20 characters.',saved:'Brief saved in this browser.',savedLabel:'Last saved brief',storageError:'Could not save the brief in this browser.'
+      contactTitle:'Start with<br><span>the task.</span>',contactIntro:'Describe the project in your own words. A few answers will help us understand the task before we talk.',briefTitle:'Tell us about the project',briefIntro:'Share what you know so far. We can clarify the details in chat.',nameLabel:'Your name',companyLabel:'Company or project <span class="optional">(optional)</span>',companyPlaceholder:'Name or business area',typeLabel:'What would you like to create?',typeWebsite:'Website',typeSystem:'Internal system',typeInterface:'Interface',goalLabel:'What problem should it solve?',goalPlaceholder:'For example: customers need an easier way to book online',audienceLabel:'Who will use it?',audiencePlaceholder:'Customers, staff, partners…',featuresLabel:'What must it be able to do?',featuresPlaceholder:'For example: catalogue, account, online payment, reports',timelineLabel:'When do you need to launch?',budgetLabel:'Budget <span class="optional">(optional)</span>',selectOption:'Not sure yet',timelineMonth:'Within a month',timelineQuarter:'Within 3 months',timelineFlexible:'Flexible',budgetUnder500:'Under ₸500,000',budget500to1500:'₸500,000–1,500,000',budgetAbove1500:'Over ₸1,500,000',formNote:'WhatsApp will open with a prepared message to areket.studio. Review it and tap Send in WhatsApp.',sendBrief:'Continue in WhatsApp',nameError:'Enter a name of at least 2 characters.',goalError:'Describe the task in at least 20 characters.',audienceError:'Tell us who will use the product.',featuresError:'List the needed features in at least 10 characters.'
     }
   };
-  Object.assign(text.ru, {projectSearch:'Поиск проектов',openMenu:'Открыть меню',closeMenu:'Закрыть меню',closeDialog:'Закрыть окно'});
-  Object.assign(text.en, {projectSearch:'Search projects',openMenu:'Open menu',closeMenu:'Close menu',closeDialog:'Close dialog'});
+  Object.assign(text.ru, {projectSearch:'Поиск проектов',openMenu:'Открыть меню',closeMenu:'Закрыть меню',closeDialog:'Закрыть окно',nameLabel:'Имя и фамилия',namePlaceholder:'Например: Айжан Садыкова',nameError:'Укажите имя и фамилию.',historyTitle:'История запросов',historyNote:'Заявки сохраняются только в этом браузере. Показаны пять последних.',historyEmpty:'Пока нет сохранённых запросов.',historyOverflow:'Более ранние запросы скрыты, но остаются в этом браузере.',historyOpenWhatsApp:'Открыть в WhatsApp',historySaved:'Запрос сохранён в истории. Отправку подтвердите в WhatsApp.',historySaveError:'Не удалось сохранить запрос в этом браузере. Проверьте настройки хранилища и попробуйте снова.'});
+  Object.assign(text.en, {projectSearch:'Search projects',openMenu:'Open menu',closeMenu:'Close menu',closeDialog:'Close dialog',nameLabel:'First and last name',namePlaceholder:'For example: Aizhan Sadykova',nameError:'Enter your first and last name.',historyTitle:'Request history',historyNote:'Requests are saved only in this browser. The latest five are shown.',historyEmpty:'No saved requests yet.',historyOverflow:'Older requests are hidden but remain in this browser.',historyOpenWhatsApp:'Open in WhatsApp',historySaved:'Request saved here. Confirm sending in WhatsApp.',historySaveError:'Could not save the request in this browser. Check storage settings and try again.'});
   const safeGet = key => { try { return localStorage.getItem(key); } catch { return null; } };
   const safeSet = (key, value) => { try { localStorage.setItem(key, value); return true; } catch { return false; } };
   let lang = safeGet('areket-language') === 'en' ? 'en' : 'ru';
   let projects = [];
   let filter = 'all';
-  let toastTimer;
   const t = key => text[lang][key] || key;
-  function showToast(message) {
-    const notice = document.querySelector('.toast-notice');
-    if (!notice) return;
-    notice.textContent = message;
-    notice.classList.add('is-visible');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => notice.classList.remove('is-visible'), 3200);
-  }
   function applyLanguage() {
     document.documentElement.lang = lang;
     document.querySelectorAll('[data-i18n]').forEach(el => { el.innerHTML = t(el.dataset.i18n); });
@@ -44,7 +35,7 @@
     const navToggle = document.querySelector('.nav-toggle');
     navToggle?.setAttribute('aria-label',t(navToggle.getAttribute('aria-expanded') === 'true' ? 'closeMenu' : 'openMenu'));
     if (projects.length) renderProjects();
-    renderSavedBrief();
+    renderBriefHistory();
   }
   function applyTheme() {
     const theme = safeGet('areket-theme') === 'dark' ? 'dark' : 'light';
@@ -52,6 +43,42 @@
     document.querySelectorAll('.theme-toggle').forEach(el => el.setAttribute('aria-label', lang === 'ru' ? (theme === 'dark' ? 'Включить светлую тему' : 'Включить тёмную тему') : (theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme')));
   }
   function escapeHTML(value) { return String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+  function readBriefHistory() {
+    try {
+      const data = JSON.parse(safeGet('areket-brief-history') || '[]');
+      return Array.isArray(data) ? data.filter(item => item && typeof item.name === 'string' && typeof item.goal === 'string') : [];
+    } catch { return []; }
+  }
+  function briefWhatsAppUrl(brief) {
+    const typeKeys = {website:'typeWebsite',system:'typeSystem',interface:'typeInterface'};
+    const timelineKeys = {month:'timelineMonth',quarter:'timelineQuarter',flexible:'timelineFlexible'};
+    const budgetKeys = {under500:'budgetUnder500','500to1500':'budget500to1500',above1500:'budgetAbove1500'};
+    const lines = [
+      `*${lang === 'ru' ? 'Новый запрос с areket.studio' : 'New enquiry from areket.studio'}*`,
+      `${t('nameLabel')}: ${brief.name}`,
+      brief.company && `${lang === 'ru' ? 'Компания / проект' : 'Company / project'}: ${brief.company}`,
+      `${t('typeLabel')}: ${t(typeKeys[brief.type] || 'typeWebsite')}`,
+      `${t('goalLabel')}\n${brief.goal}`,
+      `${t('audienceLabel')} ${brief.audience}`,
+      `${t('featuresLabel')}\n${brief.features}`,
+      `${t('timelineLabel')} ${t(timelineKeys[brief.timeline] || 'selectOption')}`,
+      brief.budget && budgetKeys[brief.budget] && `${lang === 'ru' ? 'Бюджет' : 'Budget'}: ${t(budgetKeys[brief.budget])}`
+    ].filter(Boolean);
+    return `https://wa.me/77478032383?text=${encodeURIComponent(lines.join('\n\n'))}`;
+  }
+  function renderBriefHistory() {
+    const target = document.getElementById('brief-history-list');
+    if (!target) return;
+    const history = readBriefHistory();
+    target.innerHTML = history.length ? history.slice(0,5).map(brief => {
+      const type = {website:'typeWebsite',system:'typeSystem',interface:'typeInterface'}[brief.type] || 'typeWebsite';
+      const timeline = {month:'timelineMonth',quarter:'timelineQuarter',flexible:'timelineFlexible'}[brief.timeline];
+      const budget = {under500:'budgetUnder500','500to1500':'budget500to1500',above1500:'budgetAbove1500'}[brief.budget];
+      const date = new Date(brief.createdAt);
+      const dateText = Number.isNaN(date.getTime()) ? '' : date.toLocaleDateString(lang === 'ru' ? 'ru-RU' : 'en-US');
+      return `<details class="history-entry"><summary><span><strong>${escapeHTML(brief.name)}</strong><span class="history-entry-type">${escapeHTML(t(type))}</span></span><time>${escapeHTML(dateText)}</time></summary><div class="history-entry-body">${brief.company ? `<p>${escapeHTML(brief.company)}</p>` : ''}<p><b>${escapeHTML(t('goalLabel'))}</b> ${escapeHTML(brief.goal)}</p><p><b>${escapeHTML(t('audienceLabel'))}</b> ${escapeHTML(brief.audience || '')}</p><p><b>${escapeHTML(t('featuresLabel'))}</b> ${escapeHTML(brief.features || '')}</p><p><b>${escapeHTML(t('timelineLabel'))}</b> ${escapeHTML(t(timeline || 'selectOption'))}</p>${budget ? `<p><b>${lang === 'ru' ? 'Бюджет' : 'Budget'}:</b> ${escapeHTML(t(budget))}</p>` : ''}<a href="${briefWhatsAppUrl(brief)}" target="_blank" rel="noopener noreferrer">${escapeHTML(t('historyOpenWhatsApp'))} ↗</a></div></details>`;
+    }).join('') + (history.length > 5 ? `<p class="history-overflow">${escapeHTML(t('historyOverflow'))}</p>` : '') : `<p class="history-empty">${escapeHTML(t('historyEmpty'))}</p>`;
+  }
   function renderProjects() {
     if (!$) return;
     const query = ($('#project-search').val() || '').toString().trim().toLocaleLowerCase();
@@ -74,39 +101,39 @@
     if (p.url) link.href = p.url; else link.removeAttribute('href');
     dialog.showModal();
   }
-  function renderSavedBrief() {
-    const target = document.getElementById('saved-brief');
-    if (!target) return;
-    let brief;
-    try { brief = JSON.parse(safeGet('areket-brief') || 'null'); } catch { brief = null; }
-    if (!brief || !brief.name || !brief.type) { target.hidden = true; return; }
-    target.hidden = false;
-    const typeKey = {website:'typeWebsite',system:'typeSystem',interface:'typeInterface'}[brief.type];
-    target.textContent = `${t('savedLabel')}: ${brief.name} · ${typeKey ? t(typeKey) : brief.type}`;
-  }
   function initBrief() {
     if (!$) return;
     $('#brief-form').on('submit', function(event) {
       event.preventDefault();
       const name = $('#brief-name').val().toString().trim();
-      const email = $('#brief-email').val().toString().trim();
-      const message = $('#brief-message').val().toString().trim();
+      const company = $('#brief-company').val().toString().trim();
+      const goal = $('#brief-goal').val().toString().trim();
+      const audience = $('#brief-audience').val().toString().trim();
+      const features = $('#brief-features').val().toString().trim();
       const type = $('input[name="type"]:checked').val();
+      const timeline = $('#brief-timeline').val();
+      const budget = $('#brief-budget').val();
       const errors = {
-        name: name.length >= 2 ? '' : t('nameError'),
-        email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? '' : t('emailError'),
-        message: message.length >= 20 ? '' : t('messageError')
+        name: name.split(/\s+/).filter(Boolean).length >= 2 ? '' : t('nameError'),
+        goal: goal.length >= 20 ? '' : t('goalError'),
+        audience: audience.length >= 2 ? '' : t('audienceError'),
+        features: features.length >= 10 ? '' : t('featuresError')
       };
       Object.entries(errors).forEach(([key,value]) => { $(`#${key}-error`).text(value); $(`#brief-${key}`).attr('aria-invalid',Boolean(value)); });
       const firstInvalid = Object.keys(errors).find(key => errors[key]);
       if (firstInvalid) { $(`#brief-${firstInvalid}`).trigger('focus'); return; }
-      const brief = { name, email, type, message, savedAt: new Date().toISOString() };
-      if (!safeSet('areket-brief',JSON.stringify(brief))) { showToast(t('storageError')); return; }
+      const brief = {name,company,type,goal,audience,features,timeline,budget,createdAt:new Date().toISOString()};
+      const history = readBriefHistory();
+      if (!safeSet('areket-brief-history',JSON.stringify([brief,...history]))) {
+        $('#form-save-error').text(t('historySaveError')).prop('hidden',false);
+        return;
+      }
+      $('#form-save-error').prop('hidden',true);
+      renderBriefHistory();
       this.reset();
-      renderSavedBrief();
-      showToast(t('saved'));
+      window.location.href = briefWhatsAppUrl(brief);
     });
-    $('#brief-form input,#brief-form textarea').on('input',function(){ const key = this.name; if (['name','email','message'].includes(key)) { $(`#${key}-error`).text(''); $(this).removeAttr('aria-invalid'); } });
+    $('#brief-form input,#brief-form textarea').on('input',function(){ const key = this.name; if (['name','goal','audience','features'].includes(key)) { $(`#${key}-error`).text(''); $(this).removeAttr('aria-invalid'); } });
   }
   function initDirectionHover() {
     if (!$) return;

@@ -22,7 +22,7 @@ The portfolio spans a business ERP, a public website, and an operational taxi fl
 - Responsive and accessible presentation.
 - Functional JavaScript and jQuery interactions, including a brief form.
 - Dynamic JSON project data and site-wide Russian/English localization for the course bonus.
-- The brief form is a local demonstration; no submission endpoint or business contact details were provided.
+- The brief form stores each request in this browser, shows the latest five in the left column, and prepares a WhatsApp message to the user-provided number. The visitor confirms the send in WhatsApp.
 - The requested portfolio entries are TechnoKhan, BigPro and the local TaxiPark project. Claims about commercial results or the studio's role are unverified and must not be invented.
 
 ## Brand Commitments
@@ -38,4 +38,4 @@ The portfolio spans a business ERP, a public website, and an operational taxi fl
 ## Product Principles
 - Show actual work before describing services.
 - Explain useful functions in plain language.
-- Keep the next action clear and honest about how the demo brief works.
+- Keep the next action clear and honest about how WhatsApp handoff works.

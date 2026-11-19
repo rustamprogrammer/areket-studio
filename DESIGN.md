@@ -68,5 +68,5 @@ Links move a few pixels or draw an underline. Project rows expose an image reel 
 ## Do's and Don'ts
 
 - Use actual project evidence and plainly label unavailable detail.
-- Keep form behavior honest: the course demo saves locally only.
+- Keep form behavior honest: requests are saved locally and the visitor confirms sending in WhatsApp.
 - Keep motion bounded to the hero, hover feedback and cursor-reactive ribbons.
